@@ -28,9 +28,9 @@ async function searchLocation() {
     for (const entry of data["locations"]) {
         if (entry.answer == (await sha256(guess))) {
             result = await decrypt(entry.secret, guess);
-            data = JSON.parse(result);
-            var marker = L.marker([data["lat"], data["lon"]]).addTo(map);
-            marker.bindPopup(data["message"])//.openPopup(); //TODO should it open automatically?
+            json = JSON.parse(result);
+            var marker = L.marker([json["lat"], json["lon"]]).addTo(map);
+            marker.bindPopup(json["message"])//.openPopup(); //TODO should it open automatically?
             return;
         }
     }
@@ -44,7 +44,7 @@ function hide_start_screen(){
 }
 
 //TODO given parameters on URL do this automatically
-function setup_schnitzeljagd(json){
+function setup_schnitzeljagd(){
     hide_start_screen();
     map.setView(data.position, 15);
     map.invalidateSize();
@@ -65,7 +65,7 @@ function pfalz(){
         ],
         "position": [49.442778, 7.896667]
     };
-    setup_schnitzeljagd(data);
+    setup_schnitzeljagd();
 }
 
 function stingbert(){
@@ -83,7 +83,7 @@ function stingbert(){
         ],
         "position": [49.278889, 7.115]
     };
-    setup_schnitzeljagd(data);
+    setup_schnitzeljagd();
 }
 
 function create_location(answer, lat, lon, message){
@@ -99,10 +99,10 @@ function create_location(answer, lat, lon, message){
 async function sha256(message) {
     // Convert message to ArrayBuffer
     const encoder = new TextEncoder();
-    const data = encoder.encode(message);
+    const hash = encoder.encode(message);
   
     // Generate hash
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', hash);
   
     // Convert ArrayBuffer to hex string
     const hashArray = Array.from(new Uint8Array(hashBuffer));
