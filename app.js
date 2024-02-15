@@ -10,7 +10,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 if (urlParams.has('camp')){
-    console.log(typeof(urlParams.get('camp')));
     switch (urlParams.get('camp')) {
         case "pfalz":
             pfalz();
