@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schnitzeljagd</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body> 
+  <div class="start-container" id="start-container">
+    <div class="buttons">
+      <a onclick="pfalz()" class="button">BWINF Wintercamp Pfalz</a>
+      <a onclick="stingbert()" class="button">Jugendwettbewerb Camp</a>
+      <!--<a onclick="test()" class="button">Potenziell andere?</a>-->
+    </div>
+  </div>
+  <div id="schnitzeljagd" hidden>
+    <div id="map"></div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Raten">
+        <button onclick="searchLocation()">Submit</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+  </div>
+</body>
+</html>
+<!-- How to add a new location:
+1) copy the pfalz function and rename it
+2) change the data json
+  2.1) change the position
+  2.2) remove all existing locations
+  2.3) add as many locations as wished by 
+    copy and pasting the output of create_location(answer, lat, lon, message)
+    where "answer" is the clue the people should enter in the search field
+    copy it into the array (and dont forget commas at the end)
+3) add a Button
+3.1) Add ```<a onclick="test()" class="button">Potenziell andere?</a>``` in the index.html
+3.2) change name and called function
+4) in app.js add your camp name and function to the switch statement like this:
+  case "stingbert":
+      stingbert()
+-->
