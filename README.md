@@ -14,5 +14,7 @@ How to add a new location:
 3.1) Add ```<a onclick="test()" class="button">Potenziell andere?</a>``` in the index.html
 3.2) change name and called function
 4) in app.js add your camp name and function to the switch statement like this:
-  case "stingbert":
+  ```js
+case "stingbert":
       stingbert()
+```
