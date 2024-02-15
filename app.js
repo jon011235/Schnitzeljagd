@@ -47,7 +47,8 @@ function hide_start_screen(){
 //TODO given parameters on URL do this automatically
 function setup_schnitzeljagd(json){
     hide_start_screen();
-    map.setView(data.position, 15)
+    map.setView(data.position, 15);
+    map.invalidateSize();
 }
 
 function pfalz(){
