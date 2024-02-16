@@ -24,7 +24,7 @@ if (urlParams.has('camp')){
 }
 
 async function searchLocation() {
-    var guess = document.getElementById("searchInput").value;
+    var guess = document.getElementById("searchInput").value.toLowerCase();
     for (const entry of data["locations"]) {
         if (entry.answer == (await sha256(guess))) {
             result = await decrypt(entry.secret, guess);
@@ -113,6 +113,7 @@ async function sha256(message) {
 
 // Function to decrypt the secret
 async function decrypt(encryptedText, password) {
+    password = password.toLowerCase();
     // Decode Base64
     const encryptedArray = Uint8Array.from(atob(encryptedText), c => c.charCodeAt(0));
 
