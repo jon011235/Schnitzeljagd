@@ -20,7 +20,7 @@
     <div id="map"></div>
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Raten">
-        <button onclick="searchLocation()">Submit</button>
+        <button onclick="searchLocation(document.getElementById('searchInput').value.toLowerCase())">Submit</button>
     </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>

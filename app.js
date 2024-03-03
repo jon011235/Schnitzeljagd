@@ -19,12 +19,16 @@ if (urlParams.has('camp')){
             break;
         default:
             alert("unkown camp");
-            break;
+            return;
     }
+
+    if (urlParams.has('start')){ //only makes sense if a camp is selected
+        searchLocation(urlParams.get('start'));
+    }
+
 }
 
-async function searchLocation() {
-    var guess = document.getElementById("searchInput").value.toLowerCase();
+async function searchLocation(guess) {
     for (const entry of data["locations"]) {
         if (entry.answer == (await sha256(guess))) {
             result = await decrypt(entry.secret, guess);
