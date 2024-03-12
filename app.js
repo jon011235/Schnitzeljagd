@@ -19,11 +19,7 @@ if (urlParams.has('camp')){
             break;
         default:
             alert("unkown camp");
-            return;
-    }
-
-    if (urlParams.has('start')){ //only makes sense if a camp is selected
-        searchLocation(urlParams.get('start'));
+            break;
     }
 
 }
@@ -52,6 +48,9 @@ function setup_schnitzeljagd(){
     hide_start_screen();
     map.setView(data.position, 15);
     map.invalidateSize();
+    if (urlParams.has('start')){ //only makes sense if a camp is selected
+        searchLocation(urlParams.get('start'));
+    }
 }
 
 function pfalz(){
