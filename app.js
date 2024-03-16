@@ -107,12 +107,32 @@ function stingbert(){
     data = {"locations": 
         [
             {
-            answer: "echo",
-            secret: "U2FsdGVkX1+MgkXaWVJK9M7u+PnrgUhJF5jqcB8jfyE="
+                "answer": "2baf1f40105d9501fe319a8ec463fdf4325a2a5df445adf3f572f626253678c9",
+                "secret": "Lcf5fRcnQ84zhvtbHDXsIbU6G795hppgO4PJ06uij2UrQE92uPannQ1tlJHzfFzdGGXI41meAXfxssuuVJFE9KOnwpODWc5C3/z5vHrvtqxR0Lpp"
             },
             {
-            answer: "footsteps",
-            secret: "U2FsdGVkX1+nkGo3jPY0HMb+Sl0t1CJ+w4V3R+eoWgU="
+                "answer": "5e2bf57d3f40c4b6df69daf1936cb766f832374b4fc0259a7cbff06e2f70f269",
+                "secret": "eE0Hy8p+wb4CmxAK8qE71lDw+oQomZbKcyJzEmorYaEjFyK1H64NQVf5AFm96oPAMR9bbeLEJ4orBhhafL1EpybW2UtrGNcMR+y3I1DjycFBH7FT"
+            },
+            {
+                "answer": "73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049",
+                "secret": "6UNQlPbYCK/dW0YEQAH6tUuaiSm2b0s1ca3r3QmKN9ZgkJoVvcP0JUgtupW4RC7XDAcs9K1/SXlQ1IeYwoeE1IknGsxCWFyDoPVy/RBQKHmGxkX5"
+            },
+            {
+                "answer": "a394e0a84c5b6fffd013b05e4a0235f6b04cee34a294bbd0283dae82a1fa74fe",
+                "secret": "0ToISUuHBW55YkLVV/QlflV7ak3HkvzuDmxIKEI4riGnOav2O90wCebZCCSq5rjJZGZWUmi8XdT+98kog43ARNbB5tUwa3BI0gJHyQOfW5/i7Fu9"
+            },
+            {
+                "answer": "2e89685cf91ac02b317c0e6aa69ba934f9c372a75c7acd9141e48233c4a9cae4",
+                "secret": "VeBemlHmi6SxRzj95r50w0SWWXRjD6Q/shMM66uzshWsMb7J2FtnsS/9r7Ik4NDOlL0iHpq1yiiCi7yXsfxQVSdaPsi2t+0Zon43P0YBDPOgG+Wy"
+            },
+            {
+                "answer": "b5159f2e7e14312abaac8fe9f8475604ecd1baf9ad81475c523c66ed38805a52",
+                "secret": "AFVb8I2Fk9F+VGjhgqdtev1TzMwZAS8fVzkeUqIorjip04H8SwdlYSVnkO+jy0OExAReg7GN4kKEb5r8fV5vEYoMH0jUPECOtoWEfusBgyTGD0ek"
+            },
+            {
+                "answer": "630a78299ecbe3d5151617784444b96bafb543605270c7483250e4273523291d",
+                "secret": "D3Xpwl3aBkmuHmDugELE0HUSS1MwKOszxFPUVvvLq2RL2c/t2jcADpSkOAgLz5e2d2QKTHvw/x4SwzJ23IZWzCfx4jiurU2u8phKUIC9+KQCWdLN"
             },
             //Add more as needed
         ],
